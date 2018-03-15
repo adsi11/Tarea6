@@ -36,4 +36,14 @@ public class Categoria implements Visitable{
     public double getMontoInscripcion() {
         return montoInscripcion;
     }
+
+	@Override
+	public String toString() {
+		return "Categoria [numParticipantes=" + numParticipantes + ", numGMs=" + numGMs + ", numCampeonesAnteriores="
+				+ numCampeonesAnteriores + ", montoInscripcion=" + montoInscripcion + "]";
+	}
+	
+	public void print() {
+		System.out.println(this.toString());
+	}
 }
