@@ -12,19 +12,19 @@ public class Main {
 		System.out.println("=====================Inicio del Main=======================");
 		ChessFactory players = Factory.getFactory("Player");
 		ChessFactory arbiters = Factory.getFactory("Arbiter");
-		Player uno, dos, tres;
+		Player j1, j2, j3;
 		Arbiter a1, a2;
 		System.out.println("=====================Se crean los jugadores y árbitros=======================");
-		uno = players.newPlayer("Club", "Fernando", "None", 0);
-		dos = players.newPlayer("National", "Mauricio", "CM", 0);
-		tres = players.newPlayer("International", "Lety", "GM", 0);
+		j1 = players.newPlayer("Club", "Fernando", "None", 0);
+		j2 = players.newPlayer("National", "Mauricio", "CM", 0);
+		j3 = players.newPlayer("International", "Lety", "GM", 0);
 		a1 = arbiters.newArbiter("National", "Ernesto", "AO");
 		a2 = arbiters.newArbiter("International", "Rosa", "FA");
 		
 		System.out.println("=====================Impresión de la información=======================");
-		uno.print();
-		dos.print();
-		tres.print();
+		j1.print();
+		j2.print();
+		j3.print();
 		a1.print();
 		a2.print();
 		System.out.println("Is " + a1.getName() + " authorized"
@@ -39,14 +39,14 @@ public class Main {
 		for (int i = 1; i <= 10; i++) {
 			int opRating = ThreadLocalRandom.current().nextInt(1000, 2850);
 			
-			uno.computeRating(opRating, 1, 5);
-			dos.computeRating(opRating, 0.5, 20);
-			tres.computeRating(opRating, 0, 40);
+			j1.computeRating(opRating, 1, 5);
+			j2.computeRating(opRating, 0.5, 20);
+			j3.computeRating(opRating, 0, 40);
 			System.out.println("=======" + "cambio de rating: " + i + "======");
 
-			uno.print();
-			dos.print();
-			tres.print();
+			j1.print();
+			j2.print();
+			j3.print();
 			System.out.println();
 		}
 		
