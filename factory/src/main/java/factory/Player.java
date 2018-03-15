@@ -5,40 +5,40 @@ package factory;
  * @author lpenaf
  */
 public abstract class Player {
-    private String name;
-    private String title;
-    private int rating;
+	private String name;
+	private String title;
+	private int rating;
 
-    public Player(String name, String title, int rating) {
-        this.name = name;
-        this.title = title;
-        this.rating = rating;
-    }
+	public Player(String name, String type, int rating) {
+		this.name = name;
+		this.title = type;
+		this.rating = rating;
+	}
 
-    public String getName() {
-        return name;
-    }
-    
-    public String getTitle() {
-        return title;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public int getRating() {
-        return rating;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
+	public int getRating() {
+		return rating;
+	}
 
-    @Override
-    public String toString() {
-        return "ChessPlayer{" + "name=" + name + ", title=" + title + ", rating=" + rating + '}';
-    }
-    
-    public void print(){
-        System.out.println(this.toString());
-    }
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
 
-    public abstract void computeRating(int opponentRating, int result, int k);
+	@Override
+	public String toString() {
+		return "ChessPlayer{" + "name=" + name + ", title=" + title + ", rating=" + rating + '}';
+	}
+
+	public void print() {
+		System.out.println(this.toString());
+	}
+
+	public abstract void computeRating(int opponentRating, double result, int k);
 }
