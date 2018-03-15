@@ -11,7 +11,11 @@ public class Originator {
         this.ronda = ronda;
     }
     
-    public Memento guarda(){
+    public String getRonda() {
+		return ronda;
+	}
+
+	public Memento guarda(){
         return new Memento(ronda);
     }
     
