@@ -11,8 +11,8 @@ public class NationalPlayer extends Player {
 	}
 
 	@Override
-	public void computeRating(int opponentRating, int result, int k) {
-		int newRating = this.getRating() + Math.abs((this.getRating() * result) - (opponentRating / k));
-		this.setRating(newRating);
+	public void computeRating(int opponentRating, double result, int k) {
+		int newRating = (int) (this.getRating() + Math.abs((this.getRating() * result) - (opponentRating / k)));
+		this.setRating(Math.min(Math.max(1000, newRating), 2250));
 	}
 }
