@@ -40,5 +40,5 @@ public abstract class Player {
 		System.out.println(this.toString());
 	}
 
-	public abstract void computeRating(int opponentRating, int result, int k);
+	public abstract void computeRating(int opponentRating, double result, int k);
 }

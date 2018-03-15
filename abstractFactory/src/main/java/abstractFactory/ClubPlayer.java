@@ -11,8 +11,8 @@ public class ClubPlayer extends Player {
 	}
 
 	@Override
-	public void computeRating(int opponentRating, int result, int k) {
+	public void computeRating(int opponentRating, double result, int k) {
 		int newRating = this.getRating() + Math.abs(this.getRating() - opponentRating) / k + 1;
-		this.setRating(newRating);
+		this.setRating(Math.min(Math.max(500, newRating), 2000));
 	}
 }
